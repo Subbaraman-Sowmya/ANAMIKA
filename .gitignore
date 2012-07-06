@@ -1,14 +1,3 @@
-# general things to ignore
-build/
-dist/
-*.egg-info/
-*.egg
-*.py[cod]
-__pycache__/
-*.so
-*~
-venv/
-
-# due to using nox and pytest
-.nox
-.cache
+# Files added on remote (GitHub)
+*.tmp
+*.bak
