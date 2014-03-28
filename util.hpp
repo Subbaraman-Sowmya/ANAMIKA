@@ -48,6 +48,7 @@ void		mkdir_parent (const std::string& path); // Create parent directories of pa
 std::string	readlink (const char* pathname);
 std::string	our_exe_path ();
 int		exec_command (const char* command, std::ostream& output);
+int		exec_command_with_input (const char* command, const char* p, size_t len);
 bool		successful_exit (int status);
 void		open_tempfile (std::fstream&, std::ios_base::openmode);
 std::string	escape_shell_arg (const std::string&);

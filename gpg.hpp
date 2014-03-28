@@ -28,60 +28,24 @@
  * as that of the covered work.
  */
 
-#ifndef _KEY_H
-#define _KEY_H
+#ifndef _GPG_H
+#define _GPG_H
 
-#include <map>
-#include <functional>
-#include <stdint.h>
-#include <iosfwd>
 #include <string>
+#include <vector>
+#include <cstddef>
 
-enum {
-	HMAC_KEY_LEN = 64,
-	AES_KEY_LEN = 32
+struct Gpg_error {
+	std::string	message;
+
+	explicit Gpg_error (std::string m) : message(m) { }
 };
 
-struct Key_file {
-public:
-	struct Entry {
-		unsigned char		aes_key[AES_KEY_LEN];
-		unsigned char		hmac_key[HMAC_KEY_LEN];
-
-		void			load (std::istream&);
-		void			store (std::ostream&) const;
-		void			generate ();
-	};
-
-	struct Malformed { }; // exception class
-	struct Incompatible { }; // exception class
-
-	const Entry*			get_latest () const;
-
-	const Entry*			get (uint32_t version) const;
-	void				add (uint32_t version, const Entry&);
-
-	void				load_legacy (std::istream&);
-	void				load (std::istream&);
-	void				store (std::ostream&) const;
-
-	bool				load_from_file (const char* filename);
-	bool				store_to_file (const char* filename) const;
-
-	std::string			store_to_string () const;
-
-	void				generate ();
-
-	bool				is_empty () const { return entries.empty(); }
-	bool				is_filled () const { return !is_empty(); }
-
-	uint32_t			latest () const;
-
-private:
-	typedef std::map<uint32_t, Entry, std::greater<uint32_t> > Map;
-	enum { FORMAT_VERSION = 1 };
-
-	Map				entries;
-};
+std::string			gpg_shorten_fingerprint (const std::string& fingerprint);
+std::string			gpg_get_uid (const std::string& fingerprint);
+std::vector<std::string>	gpg_lookup_key (const std::string& query);
+std::vector<std::string>	gpg_list_secret_keys ();
+void				gpg_encrypt_to_file (const std::string& filename, const std::string& recipient_fingerprint, const char* p, size_t len);
+void				gpg_decrypt_from_file (const std::string& filename, std::ostream&);
 
 #endif
