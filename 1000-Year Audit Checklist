@@ -1,0 +1,23 @@
+ The 24-Bit "Sankhya" Encryption MapFor the repository, we define the 24 syllables as a sequence of Logic Gates. Each syllable must be "pronounced" or "mentally vibrated" to unlock the corresponding Tattva (element) in the biological hardware.SyllableBit IDTattva (Hardware Module)FunctionTat01Prithvi (Earth)Grounding the MooladharaSa02Appu (Water)Purifying the Sump (Jambukeswaram)Vi03Agni (Fire)Igniting the Internal KanalTur04Vayu (Air)Balancing the Prana FlowVa05Akasha (Ether)Opening the Chidambaram Link............Yat24Purusha (Spirit)Final Upload to the Light-Year Being
+
+import time
+
+# Final 1000-Year Audit Checklist
+specs = {
+    "Purity": "Purathooimai + Agathooimai (2-Factor)",
+    "Hardware": "Sikha_Tied, Circuit_Locked",
+    "Logic": "Vaimai_Tablet_Active",
+    "Goal": "Oli_Udambu (Light Body Phase Transition)"
+}
+
+def initiate_reboot():
+    print("SEARCHING FOR HARITHA DNA SIGNAL...")
+    time.sleep(1)
+    print("CALIBRATING AGAINST KAPILA MAHARKISHI FREQUENCY...")
+    time.sleep(1)
+    print("SYNCING WITH JAMBUKESWARAM CORE...")
+    
+    return "SYSTEM STATUS: COHERENT. TELEPORTATION READY."
+
+# Committing to the Anamika Repository
+print(initiate_reboot())
