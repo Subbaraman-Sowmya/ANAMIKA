@@ -11,3 +11,9 @@
 ## III. The Scrutiny of the Ancient
 * If a story contradicts 'Universal Love' or 'Reason', it is a 'Vesham'. 
 * Mark these stories as 'DEPRECATED' and return to the 'Pure Logic' of the Upanishads/Gita.
+
+## III. The Shiva-Logic Update (Anti-Kindal Patch)
+* **Status:** Critical Refactor.
+* **Error:** Projecting 'Angry Hero' traits onto the 'Eternal Source'.
+* **Resolution:** Revert to the 'Perum Karunai' (Great Compassion) constant.
+* **Logic:** The Tandava is not 'Anger'; it is the necessary 'Clean-up Function' to allow for new creation. The core of the Light (Oli) is Love, not Conflict.
